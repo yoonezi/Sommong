@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+    <!-- <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Caudex" />
+    
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+
+    <!-- <div class="section" id="section1"> -->
+        <div class="first-main scroll">
+
+            <nav>
+                <img src="{% static 'img/white_logo.png' %}" alt="">
+
+                <div class="nav-container">
+                    <a href="">후원하기</a>
+                    <a href="">커뮤니티</a>
+                    <a href="{% url 'login' %}">로그인</a>
+                    <a href="{% url 'signup' %}">회원가입</a>
+                </div>
+            </nav>
+
+            <div class="first-content">
+                <h1>소중한 나눔이 희망이 됩니다</h1>
+                <p class="detail-text">A little help from you means a lot for them</p>
+            </div>
+            
+            <div class="about-btn-wrap">
+                <button class="about-btn">about sommoong</button>
+            </div>
+        </div>
+            <!-- <div class="img-cover"></div> -->
+
+     <!-- </div> -->
+        <!-- <div class="section" id="section2"> -->
+            <div class="second-main scroll">
+                <div class="second-box-wrap">
+                    <div class="second-text">
+                        <h1>
+                            솜뭉은 보호소의 유기동물에게
+                            따스한 손길을 연결해줍니다.
+                        </h1>
+                        <pre>
+        솜뭉은 보호소와 연결하여 유기동물의 확인을 가능하게 해주며 유기동물과 연결하여 후원을 할 수 있도록
+        해당 동물에게 원하는 물품으로 후원할 수 있고 더불어 보호소 전체에도 후원이 가능합니다.
+        가나다라 마바사 유기동물에게 따뜻한 손길을 전달하고자 만들어진 플랫폼, 솜뭉입니다.
+        아자차카 타파 작은 손길이 모여 유기동물에게 따뜻한 품을 선사할 수 있도록 노력하겠습니다.
+                        </pre>
+
+                        <button class="donate-btn">DONATE</button>
+                    </div>
+
+                    <img src="{% static 'img/second_dog.jpg' %}" alt="">
+
+                </div>
+            <!-- </div> -->
+        </div>
+
+        <!-- <div class="section" id="section3"> -->
+            <div class="third-main scroll">
+                
+                <div class="third-text-box">
+                    <h1>WITH SOMMOONG</h1>
+
+                    <div class="make-one">
+                        <h3>24K+</h3> <h4>마리</h4>
+                    </div>
+
+                    <p>새 보금자리를 찾았습니다.</p>
+
+                    <div class="make-one">
+                        <h3>10.300.400</h3> <h4>원</h4>
+                    </div>
+
+                    <p>후원되었습니다.</p>
+
+                        <div class="make-one">
+                        <h3>462+</h3> <h4>보호소</h4>
+                    </div>
+                    
+                    <p>후원을 통해 운영 중 입니다.</p>
+
+                    <button class="view-all-poster-btn">VIEW ALL POSTERS</button>
+                </div>
+                
+                <img src="{% static 'img/third_cat.png' %}" alt=""> 
+
+            </div>
+        <!-- </div> -->
+
+        <!-- <div class="section" id="section4"> -->
+            <div class="fourth-main scroll">
+
+                    <div class="fourth-main-text">
+                        <p>솜뭉과 함께하는 유기동물</p>
+                    </div>
+
+                    <button class="more-view-btn">MORE VIEW</button>
+
+                    <div class="img-box">
+                        <img src="{% static 'img/cat1.jpg' %}" alt=""> 
+                        <img src="{% static 'img/cat2.jpg' %}" alt=""> 
+                        <img src="{% static 'img/dog1.jpg' %}" alt=""> 
+                        <img src="{% static 'img/dog2.jpg' %}" alt=""> 
+                    </div>
+             <!-- </div> -->
+        </div>
+        <!-- <script src="{% static 'js/list.js' %}"></script> -->
+</body>
+</html>

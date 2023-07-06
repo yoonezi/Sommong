@@ -1,0 +1,19 @@
+{% load static %}
+<nav>
+    <img class="nav-img" style="cursor: pointer;" src="{% static 'img/logo.png' %}" alt="", onclick="location.replace('/') " >
+    <div class="nav-container">
+
+        <a href="{% url 'front_anim_list' %}">후원하기</a>
+        <a href="#">커뮤니티</a>
+
+        {% if user.is_authenticated %}        
+        <a href="#">{{ user.username }}</a>
+        <a href="{% url 'logout' %}">로그아웃</a>
+        {% else %}
+        <a href="{% url 'login' %}">로그인</a>
+        <a href="{% url 'signup' %}">회원가입</a>
+        {% endif %}
+    </div>
+</nav>
+
+<!-- user.mb_nick -->

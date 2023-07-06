@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>솜뭉</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/donation_detail.css' %}" type="text/css">
+</head>
+<body>
+    {% include 'base.html' %}
+
+    <div class="donation_detail-container">
+        <main>
+            <section>
+                <h1>기본 정보</h1>
+                <div class="donation_detail-animal-info-container">
+                    <img class="donation_detail-animal-info-img" src="{% static 'img/cat.jpeg' %}" alt="">
+    
+                    <div class="donation_detail-info-wrap">
+                        <div class="donation_detail-info-container">
+                            <div class="donation_detail-info-box">
+                                <div class="donation_detail-info-label">
+                                    <h2>공고 번호</h2>
+                                    <h2>이름</h2>
+                                    <h2>성별</h2>
+                                    <h2>나이</h2>
+                                </div>
+            
+                                <!-- 여기 정보 들어가야 합니다 -->
+                                <div class="donation_detail-info">
+                                    <p>경기-평택-2022-00859</p>
+                                    <p>솜이</p>
+                                    <p>수컷</p>
+                                    <div class="donation_detail-info-flex">
+                                        <p>1</p>
+                                        <p>살</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="donation_detail-info-box">
+                                <div class="donation_detail-info-label">
+                                    <h2>품종</h2>
+                                    <h2>체중</h2>
+                                    <h2>발견 장소</h2>
+                                    <h2>중성화 여부</h2>
+                                </div>
+            
+                                <!-- 여기 정보 들어가야 합니다 -->
+                                <div class="donation_detail-info">
+                                    <p>스코티시 폴드</p>
+                                    <div class="donation_detail-info-flex">
+                                        <p>1</p>
+                                        <p>살</p>
+                                    </div>
+                                    <p>전주역</p>
+                                    <p>아니오</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section>
+                <!-- 여기 솜이에 동물 이름 들어가야 합니다 -->
+                <h1>솜이의 이야기</h1>
+                <!-- 스토리 이미지와 글 들어갑니다 -->
+                <div class="donation_detail-animal-story-container">
+                    <img class="donation_detail-animal-story-img" src="{% static 'img/cat.jpeg' %}" alt="">
+                    <pre>
+어느 날 아침 교통사고를 당한 채
+자동차 전용도로 한편에 힘없이 누워있었습니다.
+다행히 지나가던 활동가가 발견하여
+즉시 구조하였습니다.
+                    </pre>
+
+                    <img class="donation_detail-animal-story-img" src="{% static 'img/cat.jpeg' %}" alt="">
+                    <pre>
+어느 날 아침 교통사고를 당한 채
+자동차 전용도로 한편에 힘없이 누워있었습니다.
+다행히 지나가던 활동가가 발견하여
+즉시 구조하였습니다.
+                    </pre>
+                </div>
+            </section>
+    
+            <section>
+                <h1>솜이의 가족분들</h1>
+                <div class="donation_detail-animal-family-container">
+                    <!-- 후원자 이름 들어갑니다 -->
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                    <p>이건영</p>
+                    <p>윤예지</p>
+                </div>
+            </section>
+    
+            <div class="line"></div>
+    
+            <section>
+                <h1>솜이에게 응원의 메시지를 남겨주세요!</h1>
+                <textarea name="" id="" cols="30" rows="10" placeholder="메시지를 입력해 주세요"></textarea>
+                <div class="donation_detail-comment-btn-container">
+                    <input class="donation_detail-comment-btn" type="button" value="등록">
+                </div>
+                
+                <!-- 아래 div 안에 댓글 들어갑니다 -->
+                <div class="donation_detail-comment-container">
+                    <div>
+                        <div class="donation_detail-comment-box">
+                            <div class="donation_detail-comment-user-container">
+                                <img class="donation_detail-comment-img" src="{% static 'img/cat.jpeg' %}" alt="">
+                                <h3>해피해피</h3>
+                            </div>
+    
+                            <div class="donation_detail-comment-etc-container">
+                                <h4>2022.07.10</h4>
+                                <a href="">신고</a>
+                            </div>
+                        </div>
+    
+                        <p>하반신마비로도 저렇게 키특하게 버텨준 솜이야...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <aside>
+            <section class="donation_detail-shelter-container">
+                <!-- 보호소 이미지 -->
+                <img class="donation_detail-shelter-info-img" src="{% static 'img/cat.jpeg' %}" alt="">
+    
+                <div class="donation_detail-shelter-info-container">
+                    <!-- 보호소 이름 -->
+                    <p class="donation_detail-shelter-name">천사들의 보금자리</p>
+    
+                    <div class="donation_detail-shelter-info-box">
+                        <img src="{% static 'img/phone.png' %}" alt="">
+                        <!-- 보호소 연락처 -->
+                        <p>010-8873-9456</p>
+                    </div>
+    
+                    <div class="donation_detail-shelter-info-box">
+                        <img src="{% static 'img/link.png' %}" alt="">
+                        <!-- 보호소 링크 -->
+                        <a href="https://cafe.naver.com/wonheungdong">https://cafe.naver.com/wonheungdong</a>
+                    </div>
+                </div>
+            </section>
+    
+            <section>
+                <h1>후원하기</h1>
+                <!-- 아래 div 안에 품목 하나씩 들어갑니다 -->
+                <div class="donation_detail-donation-container">
+                    <div class="donation_detail-donation-box">
+                        <div class="donation_detail-donation-title-container">
+                            <h5>사료</h5>
+    
+                            <div class="donation_detail-donation-title-amount">
+                                <p>27,000</p>
+                                <p>/</p>
+                                <p>46,000 (원)</p>
+                            </div>
+                        </div>
+    
+                        <div class="donation_detail-donation-progress-bar-container">
+                            <div class="donation_detail-percentage">
+                                <p class="donation_detail-percentage-deactivate">0%</p>
+                                <p class="donation_detail-percentage-activate">58%</p>
+                                <p class="donation_detail-percentage-deactivate">100%</p>
+                            </div>
+    
+                            <div class="donation_detail-donation-progress-bar-deactivate">
+                                <div class="donation_detail-donation-progress-bar-activate"></div>
+                            </div>
+                        </div>
+
+                        <div class="donation_detail-product-container" id="item_open_close">
+                            <p class="donation_detail-product-guide">후원할 상품을 선택해 주세요</p>
+
+                            <div class="donation_detail-product-box">
+                                <div class="donation_detail-product-info-container">
+                                    <img class="donation_detail-product-img" src="{% static 'img/dog_food_1.png' %}" alt="">
+                                    <p>내츄럴랩 케어1 강아지사료 관절&눈(눈물) 2kg</p>
+                                    <p>25,000원</p>
+                                    <div class="donation_detail-product-cnt-container">
+                                        <img src="{% static 'img/btn-minus.png' %}" alt="">
+                                        <p>1</p>
+                                        <img src="{% static 'img/btn-plus.png' %}" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="donation_detail-product-info-container">
+                                    <img class="donation_detail-product-img" src="{% static 'img/dog_food_2.png' %}" alt="">
+                                    <p>내츄럴랩 케어2 강아지사료 위장&간 2kg</p>
+                                    <p>25,000원</p>
+                                    <div class="donation_detail-product-cnt-container">
+                                        <img src="{% static 'img/btn-minus.png' %}" alt="">
+                                        <p>1</p>
+                                        <img src="{% static 'img/btn-plus.png' %}" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="donation_detail-product-info-container">
+                                    <img class="donation_detail-product-img" src="{% static 'img/dog_food_3.png' %}" alt="">
+                                    <p>내츄럴랩 케어3 강아지사료 피부&알러지 2kg</p>
+                                    <p>25,000원</p>
+                                    <!-- img 양쪽 버튼 누르면 밑에 1이 바뀌어야 합니다  -->
+                                    <div class="donation_detail-product-cnt-container">
+                                        <img src="{% static 'img/btn-minus.png' %}" alt="">
+                                        <p>1</p>
+                                        <img src="{% static 'img/btn-plus.png' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donation_detail-product-amount-container">
+                                <p>사료 후원 금액</p>
+                                <p class="donation_detail-colon">:</p>
+                                <!-- 여기 각 품목별 총 금액 들어가야 합니다 -->
+                                <p>59,200</p>
+                                <p>원</p>
+                            </div>
+                        </div>
+    
+                        <div class="donation_detail-donation-chevron-container">
+                            <img class="donation_detail-donation-chevron" id="chevron" src="{% static 'img/chevron_reverse.png' %}" alt="" onclick="item_open_close()">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="donation_detail-total-amount-container">
+                    <div class="donation_detail-total-amount-box">
+                        <p>총 후원 금액</p>
+                        <p class="donation_detail-colon">:</p>
+                        <!-- 여기 총 후원 금액 들어가야 합니다 -->
+                        <p class="donation_detail-total-amount">119,200</p>
+                        <p>원</p>
+                    </div>
+
+                    <!-- 아래 버튼 누르면 결제창으로 넘어갑니다 -->
+                    <input type="button" value="후원하기">
+                </div>
+            </section>
+        </aside>
+    </div>
+    <script>
+        function item_open_close(){
+            let click = document.getElementById("item_open_close");
+            if(click.style.display === "none"){
+                click.style.display = "block";
+                document.getElementById("chevron").src = "{% static 'img/chevron_reverse.png' %}";
+            }else{
+                click.style.display = "none";
+                document.getElementById("chevron").src = "{% static 'img/chevron.png' %}";
+            }
+        }
+    </script>
+</body>
+</html>

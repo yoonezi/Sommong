@@ -1,0 +1,496 @@
+html {
+    overflow: hidden;
+}
+
+/* 한 페이지에 하나씩 들어가게 */
+html, body {
+    /* display: block; */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* main 첫 번째 페이지 */
+.first-main {
+    position: relative;
+    background-image: url(https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2896&q=80);                                                               
+    height: 100vh;
+    background-size: cover;
+}
+
+/* .img-cover{
+    position: absolute;
+    height: 100%;
+    width: 100%;                                                        
+    z-index:1;
+ } */
+
+
+ .nav-container a {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 80px;
+}
+
+ .first-main .first-content {
+    position: absolute;
+    transform: translate(-50%, -50%);                                                                   
+    color: white;
+    z-index: 2;
+    top: 10%;
+    left: 36%;
+    margin-top: 150px;
+ }
+
+
+.first-content {
+    margin-left: 10%;
+}
+
+ .first-content h1 {
+    width: 1182px;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-size: 80px;
+    margin-top: 60px;
+}
+
+.detail-text {
+    width: 597px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    font-size: 28px;
+} 
+
+
+/* about sommong button 효과 */
+.about-btn-wrap {
+    position: absolute;
+    top: 16%;
+    left: 42%;
+    margin-top: 590px;
+    /* padding: 0px 66px 0px 66px; */
+}
+
+.about-btn {
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 20px;
+    background:none;
+    color:#fff;
+    
+    border:none;
+    padding:3px 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    text-align: center;
+
+}
+
+.about-btn:hover{
+    background:none;
+    color:white;
+}
+
+.about-btn:before,.about-btn:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:0.1px;
+    width:0;
+    background: #fff;
+    transition:400ms ease all;
+}
+
+.about-btn:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+
+.about-btn:hover:before,.about-btn:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+
+
+
+/* main 두 번째 페이지 */
+.second-main {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.second-box-wrap{
+    width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    padding: 44px 94px;
+}
+
+.second-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.second-text h1 {
+    width: 638px;
+    height: 144px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    color:#373737;
+    font-size: 50px;
+}
+
+.second-text pre {
+    /* width: 640px; */
+    height: 126px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 200;
+    color:#373737;
+    margin-top: 20px;
+}
+
+.donate-btn {
+    font-family: 'Caudex';
+    font-weight: 300;
+    font-size: 15px;
+    color: white;
+    width: 173px;
+    height: 34px;
+    background-color: #373737;
+    border-style: none;
+    border-radius: 16px;
+}
+
+.donate-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #373737;
+    border-style: solid;
+}
+
+.second-main img {
+    height: 700px;
+    width: 500px;
+}
+
+
+/* main third page */
+.third-main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2a3c3a;
+    justify-content: space-between;
+}
+
+.third-text-box {
+    color: white;
+    line-height: 1.8;
+    margin-left: 100px;
+}
+
+
+.third-text-box h1 {
+    font-family: Caudex;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+
+.third-text-box h3 {
+    font-family: Pretendard;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.third-text-box h4 {
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.third-text-box p {
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.make-one {
+    display: flex;
+}
+
+.third-main img {
+    /* width: 1218px;
+    height: 940px; */
+    width: 818px;
+    height: 640px;
+    margin-top: 80px;
+}
+
+.view-all-poster-btn {
+    font-family: Caudex;
+    font-size: 14px;
+    width: 176px;
+    height: 34px;
+    margin-top: 46px;
+    padding: 8px 21px;
+    border-radius: 15px;
+    background-color: #495855;
+    border: none;
+    color: white;
+}
+
+.view-all-poster-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #2a3c3a;
+    border-style: solid;
+    border: #fff;
+    padding: 8px 21px;
+}
+
+/* main fourth page */
+.fourth-main {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+  
+}
+
+.fourth-main-text p{
+    width: 100%;
+    height: 62.4px;
+    padding: 150px 0px 0px 0px;
+    font-family: 'LeferiPoint-BlackA';
+    font-size: 48px;
+
+    color: #373737;
+    text-align: center;
+}
+
+.more-view-btn {
+    font-family: Caudex;
+    font-size: 14px;
+    width: 176px;
+    height: 34px;
+    margin: 50px;
+    padding: 8px 21px;
+    border-radius: 15px;
+    background-color: #495855;
+    border: none;
+    color: white;
+}
+
+.more-view-btn:hover {
+        cursor: pointer;
+        background-color: #fff;
+        color: #2a3c3a;
+        border-style: solid;
+        padding: 8px 21px;
+}
+
+.img-box {
+    display: flex;
+    margin: auto;
+    width: 1040px;
+    text-align: center;
+    margin: 0px auto;
+    
+    
+}
+
+.img-box img {
+    width: 250px;  
+    height: 250px;
+    margin: 0 10px;
+}
+
+
+/* .cursor {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(242,151,0,.3);
+    user-select: none;
+    transform: translate3D(-50%,-50%,0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+} */
+
+
+
+.section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+/* base.css */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'LeferiPoint-BlackA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* font */
+@font-face {
+    font-family: 'LeferiBaseType-BoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-BoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: local('Pretendard Variable'), url('./images/PretendardVariable.woff2') format('woff2-variations');
+}
+
+/* thin */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+/* extra-light */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-display: swap;
+}
+/* light */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+/* regular */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+/* medium */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+/* semi-bold */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+/* bold */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+/* extra-bold */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+/* black */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBMPlexSansKR-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 54px;
+    background-color: transparent;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.14);
+}
+
+img {
+    height: 34px;
+    margin-top: -6px;
+    margin-left: 100px;
+}
+
+.nav-container {
+    display: flex;
+    margin-right: 100px;
+}

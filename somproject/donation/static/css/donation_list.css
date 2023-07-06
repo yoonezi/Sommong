@@ -1,0 +1,249 @@
+/* filter */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    background: rgba(154, 215, 245, 0.05);
+}
+
+.donation_list-filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 380px;
+}
+
+.donation_list-filter-container input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 14px;
+    color: #9AD7F5;
+}
+
+.donation_list-filter-container input:focus {
+    cursor: pointer;
+}
+
+.donation_list-filter-box {
+    display: flex;
+    align-items: center;
+}
+
+.donation_list-filter-item {
+    display: flex;
+    align-items: center;
+    margin-left: 76px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.055em;
+    color: #535C6A;
+}
+
+.donation_list-filter-item img {
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+
+
+
+.donation_list-search-container {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 30px;
+    margin-right: 98px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.donation_list-search-container img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 6px;
+}
+
+.donation_list-search-container input {
+    border: none;
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.055em;
+    color: #535C6A;
+}
+
+.donation_list-search-container input:focus {
+    outline: none;
+}
+
+/* card */
+.donation_list-main-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main {
+    margin: 50px 0;
+    width: 1320px;
+    padding-left: 20px;
+}
+
+.donation_list-sorting-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.donation_list-sorting-container div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.donation_list-sorting-container p {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 14px;
+    color: #535C6A;
+}
+
+.donation_list-sorting-dropdown {
+    width: 98px;
+    height: 20px;
+    margin-right: 20px;
+    padding: 6px 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2.34783px rgba(0, 0, 0, 0.25);
+    border-radius: 2.34783px;
+}
+
+.donation_list-sorting-container img {
+    width: 16px;
+    height: 16px;
+    margin-left: 28px;
+}
+
+.donation_list-card-cnt {
+    margin-left: 4px;
+}
+
+.donation_list-card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    width: 200px;
+    height: 280px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.donation_list-animal-img {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 9px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.donation_list-animal-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 16px;
+    color: #535C6A;
+}
+
+.donation_list-animal-name img {
+    width: auto;
+    height: 12px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+
+.donation_list-info-container {
+    margin: 0 20px;
+}
+
+.donation_list-species {
+    display: flex;
+    padding: 6px 0;
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: #535C6A;
+}
+
+.donation_list-species img {
+    width: 14px;
+    margin-right: 10px;
+}
+
+.donation_list-age {
+    display: flex;
+    padding: 6px 0;
+    border-top: 0.5px solid #EFEFEF;
+    border-bottom: 0.5px solid #EFEFEF;
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: #535C6A;
+}
+
+.donation_list-age div {
+    display: flex;
+}
+
+.donation_list-age img {
+    width: 14px;
+    margin-right: 10px;
+}
+
+.donation_list-kg {
+    display: flex;
+    padding: 6px 0;
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: #535C6A;
+}
+
+.donation_list-kg div {
+    display: flex;
+}
+
+.donation_list-kg-img {
+    width: 13px;
+    margin-right: 10px;
+}
+
+.donation_list-like {
+    width: 14px;
+    height: 14px;
+    margin-left: 90px;
+}
+
+.donation_list-like:hover {
+    cursor: pointer;
+}

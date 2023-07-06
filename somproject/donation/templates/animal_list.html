@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>솜뭉</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/donation_detail.css' %}" type="text/css">
+</head>
+<body>
+    {% include 'base.html' %}
+
+    <header>
+        <div>
+            <input type="button" value="Clean All Filters">
+
+            <div>
+                <p>보호소</p>
+                <img src="{% static 'img/chevron.png' %}" alt="">
+            </div>
+
+            <div>
+                <p>종</p>
+                <img src="{% static 'img/chevron.png' %}" alt="">
+            </div>
+
+            <div>
+                <p>성별</p>
+                <img src="{% static 'img/chevron.png' %}" alt="">
+            </div>
+
+            <div>
+                <p>나이</p>
+                <img src="{% static 'img/chevron.png' %}" alt="">
+            </div>
+        </div>
+
+        <div>
+            <img src="" alt="">
+            <input type="text" placeholder="이름으로 검색">
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <div>
+                <p>총</p>
+                <!-- 여기 80에 총 개체 몇개인지 들어가야 합니다 -->
+                <p>80</p> 
+                <p>건</p>
+            </div>
+
+            <div>
+                <!-- 여기 드롭다운으로 글자 바뀌어야 합니다 -->
+                <p>입소일</p>
+                <img src="{% static 'img/chevron' %}" alt="">
+            </div>
+        </div>
+
+        <div>
+            <!-- 이 section tag 가 카드 하나입니다 -->
+            <section>
+                <!-- 여기 동물 사진 들어갑니다 -->
+                <img src="../media/imgs/animal/0b47d187-df10-4f3e-9e33-56d956ef420d.jpg" alt="">
+
+                <div>
+                    <!-- 동물이름 -->
+                    <p>나래</p>
+                    <!-- 성별에 따라 다른 아이콘 -->
+                    <img src="" alt="">
+                </div>
+
+                <div>
+                    <div>
+                        <img src="" alt="">
+                        <!-- 동물 종 -->
+                        <p>재패니즈 스피츠</p>
+                    </div>
+
+                    <div>
+                        <img src="" alt="">
+                        <div>
+                            <!-- 동물 나이 -->
+                            <p>12</p>
+                            <p>살</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="" alt="">
+                            <div>
+                                <!-- 동물 몸무게 -->
+                                <p>12</p>
+                                <p>kg</p>
+                            </div>
+                        </div>
+
+                        <!-- 좋아요 하트 -->
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>

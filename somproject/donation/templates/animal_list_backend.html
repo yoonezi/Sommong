@@ -1,0 +1,196 @@
+        <header>
+            <div>
+                <select id="shelter" name="shelter_list" onChange="redirectUrl(document.getElementsByName('anim_name')[0].value)">
+                    <option  value="" selected="selected">보호소</option>
+                    {% for shelter in category.shelter %}
+                        {% if shelter.shelter_valid == 'A'%}
+                        <option value="{{shelter.shelter_id}}">{{shelter.shelter_name}}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div>
+                <select id="breed" name="breed_list" onChange="redirectUrl(document.getElementsByName('anim_name')[0].value)">
+                    <option  value="" selected="selected">종</option>
+                    <optgroup label="dog">
+                    {% for breed in category.breed %}
+                        {% if breed.ca_name1 == '개' %}
+                        <option value="{{ breed.ca_id }}">{{breed.ca_name2}}</option>
+                        {% endif %}
+                    {% endfor %}
+                    </optgroup>
+                    <optgroup label="cat">
+                    {% for breed in category.breed %}
+                        {% if breed.ca_name1 == '고양이' %}
+                        <option value="{{ breed.ca_id }}">{{breed.ca_name2}}</option>
+                        {% endif %}
+                    {% endfor %}
+                    </optgroup>
+                </select>
+            </div>
+
+            <div>
+                <select id="sex" name="sex_list" onChange="redirectUrl(document.getElementsByName('anim_name')[0].value)">
+                    <option  value="" selected="selected">성별</option>
+                    {% for key,val in category.sex.items %}
+                        <option value="{{key}}">{{val}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div>
+                <select id="age" name="age_list" onChange="redirectUrl(document.getElementsByName('anim_name')[0].value)">
+                    <option  value="" selected="selected">나이</option>
+                    {% for num in category.age %}
+                        <option value="{{ num }}">{{ num }} 살</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div>
+                <input  type="text" name="anim_name" placeholder="이름으로 검색">
+                <button onclick="redirectUrl(document.getElementsByName('anim_name')[0].value)">검색</button>
+            </div>
+        </header>
+
+        <main>
+            <div>
+                <div>
+                    <p>총</p>
+                    <p>{{ anim_infos.count }}</p> 
+                    <p>건</p>
+                </div>
+
+                <div>
+                    <!-- 여기 드롭다운으로 글자 바뀌어야 합니다 (입소일 순, 후원금액 순, 나이 순= 시간되면 하자!) -->
+                    <select id="order_by" name="order_list" onChange="">
+                        <option  value="" selected="selected">입소일</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div>
+                <!-- 이 section tag 가 카드 하나입니다 -->
+
+                {% for info in anim_infos%}
+                <section id="anim_card_{{ info.anim_id }}">
+                    <img src="{{ info.anim_img1.url }}" alt="">
+                    <div>
+                        <p>{{info.anim_name }}</p>
+                        <!-- 성별에 따라 다른 아이콘 -->
+                        {% if info.anim_sex == 'M' %}
+                        <img src="" alt="">
+                        {% else %}
+                        <img src="" alt="">
+                        {% endif %}
+                    </div>
+    
+                    <div>
+                        <div>
+                            {% if info.anim_breed.ca_name1 == '개' %}
+                            <img src="" alt="">    <!-- 개 아이콘 -->
+                            {% else %}
+                            <img src="" alt="">    <!-- 고양이 아이콘 -->
+                            {% endif %}
+                            <!-- 동물 종 -->
+                            <p>{{info.anim_breed.ca_name2}}</p>
+                        </div>
+    
+                        <div>
+                            <img src="" alt="">
+                            <div>
+                                <!-- 동물 나이 -->
+                                <p>{{ info.anim_age }}</p>
+                                <p>살</p>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <div>
+                                <img src="" alt="">
+                                <div>
+                                    <!-- 동물 몸무게 -->
+                                    <p>{{ info.anim_weight }}</p>
+                                    <p>kg</p>
+                                </div>
+                            </div>
+    
+                            <!-- 좋아요 하트 -->
+                            <img src="" alt="" onclick="addFavorite(document.getElementById('anim_card_{{ info.anim_id }}'))">
+                        </div>
+                    </div>
+                </section>
+                {% endfor %}
+            </div>
+        </main>
+
+
+
+            <script>
+                function addFavorite(card_id){
+                    console.log(card_id);
+                    return true;
+                }
+                function redirectUrl(anim_name){
+                    var shelter_list = document.getElementById("shelter");
+                    var breed_list = document.getElementById("breed");
+                    var sex_list = document.getElementById("sex");
+                    var age_list = document.getElementById("age");
+                    
+
+                    shelter_pk = shelter_list.options[shelter_list.selectedIndex].value; // 보호소 PK
+                    breed_pk = breed_list.options[breed_list.selectedIndex].value;
+                    sex_code = sex_list.options[sex_list.selectedIndex].value;
+                    age_num = age_list.options[age_list.selectedIndex].value;
+
+                    console.log('----------------------- 전달정보-----------------------------')
+                    console.log('보호소 PK : ' + shelter_pk);
+                    console.log('종 PK : ' + breed_pk);
+                    console.log('암수 코드 : ' + sex_code);
+                    console.log('나이 값 : '+ age_num);
+                    console.log('동물 이름 : '+ anim_name);
+                    console.log('-------------------------------------------------------------')
+
+                    // 위의 정보들을 POST 형태로 전달
+
+                    return true;
+                }
+                // 무한스크롤도 구현해야된다!
+            </script>
+<!--
+<style>
+    .thumbnail a{width:100%; height:100%; display:inline-block;}
+    img, li, dl, dt, dd, div{	margin:0; padding:0; border:none; resize:none; list-style:none; box-sizing:border-box; border-spacing:0; border-collapse:collapse; 	}
+    a{	text-decoration:none; 	}
+    input, select, img, button{	vertical-align:middle; font-size:12px; font-family:'돋움', sans-serif; color:#6d6e71;	}
+</style>
+
+{% for info in anim_infos%}
+<li>
+    <div class="photo">
+        <div class="thumbnail">
+            <a href="#">
+                <img src="{{ info.anim_img1.url }}" alt="error">
+            </a>
+        </div>
+    </div>
+    <div class="txt">
+        <dl><dt>공고번호</dt><dd>{{ info.anim_code }}</dd></dl>
+        <dl><dt>이름</dt><dd>{{ info.anim_name }}</dd></dl>
+        <dl><dt>입소일자</dt><dd>{{ info.anim_regdate }} </dd></dl>
+        <dl><dt>품종</dt><dd>{{ info.anim_breed }}</dd></dl>
+        <dl><dt>성별</dt><dd>{{ info.anim_sex }}</dd></dl>
+        <dl><dt>나이</dt><dd>{{ info.anim_age }}</dd></dl>
+        <dl><dt>무게</dt><dd>{{ info.anim_weight }}</dd></dl>
+    </div>
+</li>
+{% endfor %}
+-->
+
+
+    <!-- 페이징처리 끝 -->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

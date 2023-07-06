@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+</head>
+
+<body>
+    {% include 'base.html' %}
+
+    <main>
+        <div class="try">
+            <h1>sommoong</h1>
+
+            <p class="social-login-title">다른 서비스로 로그인</p>
+
+            <div class="social-login-container">
+                <img src="{% static 'img/google.png' %}" alt="">
+                <img src="{% static 'img/naver.png' %}" alt="">
+                <img src="{% static 'img/kakaotalk.png' %}" alt="">
+                <img src="{% static 'img/facebook.png' %}" alt="">
+            </div>
+            
+            <div class="login-form">
+                <div class="login-input-container ">
+                    <p>ID</p>
+                    <input type="text" class="account">
+                </div>
+                
+                <div class="login-input-container">
+                    <p>PW</p>
+                    <input type="text" class="account">
+                </div>
+            </div>
+
+            <button class="login">로그인</button>
+
+            <div class ="login-detail">
+                <div class="lgoin-status">
+                    <img class="checkbox_checked"" src="{% static 'img/checkbox_checked.png' %}" alt="">
+                    <p>로그인 상태 유지</p>
+                </div>
+
+                <div class="login-finder-signup">
+                    <a href="">아이디 찾기</a>
+                    <p>|</p>
+                    <a href="">비밀번호 재설정</a>
+                    <p>|</p>
+                    <a href="">회원가입</a> 
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

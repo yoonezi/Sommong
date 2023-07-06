@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>솜뭉</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/donation_list.css' %}" type="text/css">
+    
+</head>
+<body>
+    {% include 'base.html' %}
+
+    <header>
+        <div class="donation_list-filter-container">
+            <input type="button" value="Clear All Filters">
+
+            <div class="donation_list-filter-box">
+                <div class="donation_list-filter-item">
+                    <p>보호소</p>
+                    <img src="{% static 'img/chevron.png' %}" alt="">
+                </div>
+    
+                <div class="donation_list-filter-item">
+                    <p>종</p>
+                    <img src="{% static 'img/chevron.png' %}" alt="">
+                </div>
+    
+                <div class="donation_list-filter-item">
+                    <p>성별</p>
+                    <img src="{% static 'img/chevron.png' %}" alt="">
+                </div>
+    
+                <div class="donation_list-filter-item">
+                    <p>나이</p>
+                    <img src="{% static 'img/chevron.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="donation_list-search-container">
+            <img src="{% static 'img/search_icon.png' %}" alt="">
+            <input type="text" placeholder="이름으로 검색">
+        </div>
+    </header>
+
+    <div class="donation_list-main-wrap">
+        <main>
+            <div class="donation_list-sorting-container">
+                <div>
+                    <p>총</p>
+                    <!-- 여기 80에 총 개체 몇개인지 들어가야 합니다 -->
+                    <p class="donation_list-card-cnt">{{ anim_infos.count }}</p> 
+                    <p>건</p>
+                </div>
+    
+                <div class="donation_list-sorting-dropdown">
+                    <!-- 여기 드롭다운으로 글자 바뀌어야 합니다 -->
+                    <p>입소일</p>
+                    <img src="{% static 'img/chevron.png' %}" alt="">
+                </div>
+            </div>
+    
+            <div class="donation_list-card-container">
+                <!-- 이 section tag 가 카드 하나입니다 -->
+                {% for info in anim_infos %}
+                <section id="anim_card_{{ info.anim_id }}">
+                    <!-- 여기 동물 사진 들어갑니다 -->
+                    <img class="donation_list-animal-img" src="{{ info.anim_img1.url }}" style="cursor: pointer;" alt="" onclick="location.replace('/donation/animal_detail')   ">
+                
+                    <div class="donation_list-animal-name">
+                        <!-- 동물이름 -->
+                        <p>{{info.anim_name }}</p>
+                        <!-- 성별에 따라 다른 아이콘 -->
+                        {% if info.anim_sex == 'M' %}
+                        <img src="{% static 'img/male.png' %}" alt="">
+                        {% else %}
+                        <img src="{% static 'img/female.png' %}" alt="">
+                        {% endif %}
+                    </div>
+    
+                    <div class="donation_list-info-container">
+                        <div class="donation_list-species">
+                            {% if info.anim_breed.ca_name1 == '개' %}
+                            <img src="{% static 'img/dog_icon.png' %}" alt="">
+                            {% else %}
+                            <img src="{% static 'img/cat_icon.png' %}" alt="">
+                            {% endif %}
+                            <!-- 동물 종 -->
+                            <p>{{info.anim_breed.ca_name2}}</p>
+                        </div>
+    
+                        <div class="donation_list-age">
+                            <img src="{% static 'img/age.png' %}" alt="">
+                            <div>
+                                <!-- 동물 나이 -->
+                                <p>{{ info.anim_age }}</p>
+                                <p>살</p>
+                            </div>
+                        </div>
+    
+                        <div class="donation_list-kg">
+                            <div>
+                                <img class="donation_list-kg-img" src="{% static 'img/kg.png' %}" alt="">
+                                <div>
+                                    <!-- 동물 몸무게 -->
+                                    <p>{{ info.anim_weight }}</p>
+                                    <p>kg</p>
+                                </div>
+                            </div>
+    
+                            <!-- 좋아요 하트 -->
+                            <img class="donation_list-like" id="like_empty_{{info.anim_id}}" onclick="like_activate()" src="{% static 'img/like.png' %}" alt="">
+                            <img class="donation_list-like" id="like_fill" style="display: none;" onclick="like_deactivate()" src="{% static 'img/like_fill.png' %}" alt="">
+                        </div>
+                    </div>
+                </section>
+                {% endfor %}
+
+                <script>
+                    function like_activate(){
+                        document.getElementById("like_empty_{{info.anim_id}}").style.display = 'none';
+                        document.getElementById("like_fill").style.display = 'block';
+                    }
+            
+                    function like_deactivate(){
+                        document.getElementById("like_empty").style.display = 'block';
+                        document.getElementById("like_fill").style.display = 'none';
+                    }
+                </script>
+            </div>
+        </main>
+    </div>
+    
+
+
+
+    <div class="pagination">
+        {% if anim_infos.has_previous %}
+        <a class="pagination-action" href="?page=1">
+            <i class='bx bx-chevrons-left' aria-hidden="true"></i> </a>
+        <a class="pagination-action" href="?page={{ anim_infos.previous_page_number }}">
+            <i class='bx bx-chevron-left' aria-hidden="true"></i>
+        </a>
+        {% endif %}
+        {% for num in anim_infos.paginator.page_range %}
+            {% if anim_infos.number == num %}
+                <span class="pagination-number pagination-current">{{ num }}</span>
+            {% elif num > anim_infos.number|add:'-3' and num < anim_infos.number|add:'3' %}
+                <a class="pagination-number" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+        {% if anim_infos.has_next %}
+            <a class="pagination-action" href="?page={{ anim_infos.next_page_number }}">
+                <i class='bx bx-chevron-right' aria-hidden="true"></i>
+            </a>
+            <a class="pagination-action" href="?page={{ anim_infos.paginator.num_pages }}">
+                <i class='bx bx-chevrons-right' aria-hidden="true"></i>
+            </a>
+        {% endif %}
+    </div>
+
+    <style>
+        .pagination {
+    display: flex;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination a {
+    text-decoration: none;
+}
+
+.pagination-number {
+    padding: 12px 17px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #9AD7F5;
+}
+
+.pagination-number:hover,
+.pagination-current {
+    cursor: pointer;
+}
+
+.pagination-action {
+    margin: 0 2px;
+    display: flex;
+    padding: 1px 2px;
+    color: #fff;
+    font-size: 1.3em;
+    align-items: center;
+}
+
+.pagination-action:hover,
+.pagination-previous,
+.pagination-next {
+    color: #3354AA;
+}
+    </style>
+
+</body>

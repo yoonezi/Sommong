@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>솜뭉</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/donation_list.css' %}" type="text/css">
+</head>
+<body>
+    {% include 'base.html' %}
+
+    <header>
+        <div class="donation_list-filter-container">
+            <input type="button" value="Clear All Filters">
+
+            <div class="donation_list-filter-box">
+                <div class="donation_list-filter-item">
+                    <p>보호소</p>
+                    <img src="{% static 'img/chevron.png' %}" alt="">
+                </div>
+    
+                <div class="donation_list-filter-item">
+                    <p>종</p>
+                    <img src="{% static 'img/chevron.png' %}" alt="">
+                </div>
+    
+                <div class="donation_list-filter-item">
+                    <p>성별</p>
+                    <img src="{% static 'img/chevron.png' %}" alt="">
+                </div>
+    
+                <div class="donation_list-filter-item">
+                    <p>나이</p>
+                    <img src="{% static 'img/chevron.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="donation_list-search-container">
+            <img src="{% static 'img/search_icon.png' %}" alt="">
+            <input type="text" placeholder="이름으로 검색">
+        </div>
+    </header>
+
+    <main>
+        <div class="donation_list-sorting-container">
+            <div>
+                <p>총</p>
+                <!-- 여기 80에 총 개체 몇개인지 들어가야 합니다 -->
+                <p class="donation_list-card-cnt">80</p> 
+                <p>건</p>
+            </div>
+
+            <div class="donation_list-sorting-dropdown">
+                <!-- 여기 드롭다운으로 글자 바뀌어야 합니다 -->
+                <p>입소일</p>
+                <img src="{% static 'img/chevron.png' %}" alt="">
+            </div>
+        </div>
+
+        <div class="donation_list-card-container">
+            <!-- 이 section tag 가 카드 하나입니다 -->
+            <section>
+                <!-- 여기 동물 사진 들어갑니다 -->
+                <img class="donation_list-animal-img" src="../media/imgs/animal/b2ffe946-f005-44dd-8c86-6e0f9e9c3153.jpg" alt="">
+
+                <div class="donation_list-animal-name">
+                    <!-- 동물이름 -->
+                    <p>나래</p>
+                    <!-- 성별에 따라 다른 아이콘 -->
+                    <img src="{% static 'img/male.png' %}" alt="">
+                </div>
+
+                <div class="donation_list-info-container">
+                    <div class="donation_list-species">
+                        <img src="{% static 'img/animal.png' %}" alt="">
+                        <!-- 동물 종 -->
+                        <p>재패니즈 스피츠</p>
+                    </div>
+
+                    <div class="donation_list-age">
+                        <img src="{% static 'img/age.png' %}" alt="">
+                        <div>
+                            <!-- 동물 나이 -->
+                            <p>12</p>
+                            <p>살</p>
+                        </div>
+                    </div>
+
+                    <div class="donation_list-kg">
+                        <div>
+                            <img class="donation_list-kg-img" src="{% static 'img/kg.png' %}" alt="">
+                            <div>
+                                <!-- 동물 몸무게 -->
+                                <p>12</p>
+                                <p>kg</p>
+                            </div>
+                        </div>
+
+                        <!-- 좋아요 하트 -->
+                        <img class="donation_list-like" src="{% static 'img/like.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section>
+                <!-- 여기 동물 사진 들어갑니다 -->
+                <img class="donation_list-animal-img" src="../media/imgs/animal/b2ffe946-f005-44dd-8c86-6e0f9e9c3153.jpg" alt="">
+
+                <div class="donation_list-animal-name">
+                    <!-- 동물이름 -->
+                    <p>나래</p>
+                    <!-- 성별에 따라 다른 아이콘 -->
+                    <img src="{% static 'img/male.png' %}" alt="">
+                </div>
+
+                <div class="donation_list-info-container">
+                    <div class="donation_list-species">
+                        <img src="{% static 'img/animal.png' %}" alt="">
+                        <!-- 동물 종 -->
+                        <p>재패니즈 스피츠</p>
+                    </div>
+
+                    <div class="donation_list-age">
+                        <img src="{% static 'img/age.png' %}" alt="">
+                        <div>
+                            <!-- 동물 나이 -->
+                            <p>12</p>
+                            <p>살</p>
+                        </div>
+                    </div>
+
+                    <div class="donation_list-kg">
+                        <div>
+                            <img class="donation_list-kg-img" src="{% static 'img/kg.png' %}" alt="">
+                            <div>
+                                <!-- 동물 몸무게 -->
+                                <p>12</p>
+                                <p>kg</p>
+                            </div>
+                        </div>
+
+                        <!-- 좋아요 하트 -->
+                        <img class="donation_list-like" src="{% static 'img/like.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <!-- 여기 동물 사진 들어갑니다 -->
+                <img class="donation_list-animal-img" src="../media/imgs/animal/b2ffe946-f005-44dd-8c86-6e0f9e9c3153.jpg" alt="">
+
+                <div class="donation_list-animal-name">
+                    <!-- 동물이름 -->
+                    <p>나래</p>
+                    <!-- 성별에 따라 다른 아이콘 -->
+                    <img src="{% static 'img/male.png' %}" alt="">
+                </div>
+
+                <div class="donation_list-info-container">
+                    <div class="donation_list-species">
+                        <img src="{% static 'img/animal.png' %}" alt="">
+                        <!-- 동물 종 -->
+                        <p>재패니즈 스피츠</p>
+                    </div>
+
+                    <div class="donation_list-age">
+                        <img src="{% static 'img/age.png' %}" alt="">
+                        <div>
+                            <!-- 동물 나이 -->
+                            <p>12</p>
+                            <p>살</p>
+                        </div>
+                    </div>
+
+                    <div class="donation_list-kg">
+                        <div>
+                            <img class="donation_list-kg-img" src="{% static 'img/kg.png' %}" alt="">
+                            <div>
+                                <!-- 동물 몸무게 -->
+                                <p>12</p>
+                                <p>kg</p>
+                            </div>
+                        </div>
+
+                        <!-- 좋아요 하트 -->
+                        <img class="donation_list-like" src="{% static 'img/like.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <!-- 여기 동물 사진 들어갑니다 -->
+                <img class="donation_list-animal-img" src="../media/imgs/animal/b2ffe946-f005-44dd-8c86-6e0f9e9c3153.jpg" alt="">
+                <div class="donation_list-animal-name">
+                    <!-- 동물이름 -->
+                    <p>나래</p>
+                    <!-- 성별에 따라 다른 아이콘 -->
+                    <img src="{% static 'img/male.png' %}" alt="">
+                </div>
+
+                <div class="donation_list-info-container">
+                    <div class="donation_list-species">
+                        <img src="{% static 'img/animal.png' %}" alt="">
+                        <!-- 동물 종 -->
+                        <p>재패니즈 스피츠</p>
+                    </div>
+
+                    <div class="donation_list-age">
+                        <img src="{% static 'img/age.png' %}" alt="">
+                        <div>
+                            <!-- 동물 나이 -->
+                            <p>12</p>
+                            <p>살</p>
+                        </div>
+                    </div>
+
+                    <div class="donation_list-kg">
+                        <div>
+                            <img class="donation_list-kg-img" src="{% static 'img/kg.png' %}" alt="">
+                            <div>
+                                <!-- 동물 몸무게 -->
+                                <p>12</p>
+                                <p>kg</p>
+                            </div>
+                        </div>
+
+                        <!-- 좋아요 하트 -->
+                        <img class="donation_list-like" src="{% static 'img/like.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <!-- 여기 동물 사진 들어갑니다 -->
+                <img class="donation_list-animal-img" src="../media/imgs/animal/b2ffe946-f005-44dd-8c86-6e0f9e9c3153.jpg" alt="">
+
+                <div class="donation_list-animal-name">
+                    <!-- 동물이름 -->
+                    <p>나래</p>
+                    <!-- 성별에 따라 다른 아이콘 -->
+                    <img src="{% static 'img/male.png' %}" alt="">
+                </div>
+
+                <div class="donation_list-info-container">
+                    <div class="donation_list-species">
+                        <img src="{% static 'img/animal.png' %}" alt="">
+                        <!-- 동물 종 -->
+                        <p>재패니즈 스피츠</p>
+                    </div>
+
+                    <div class="donation_list-age">
+                        <img src="{% static 'img/age.png' %}" alt="">
+                        <div>
+                            <!-- 동물 나이 -->
+                            <p>12</p>
+                            <p>살</p>
+                        </div>
+                    </div>
+
+                    <div class="donation_list-kg">
+                        <div>
+                            <img class="donation_list-kg-img" src="{% static 'img/kg.png' %}" alt="">
+                            <div>
+                                <!-- 동물 몸무게 -->
+                                <p>12</p>
+                                <p>kg</p>
+                            </div>
+                        </div>
+
+                        <!-- 좋아요 하트 -->
+                        <img class="donation_list-like" src="{% static 'img/like.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <!-- 여기 동물 사진 들어갑니다 -->
+                <img class="donation_list-animal-img" src="../media/imgs/animal/b2ffe946-f005-44dd-8c86-6e0f9e9c3153.jpg" alt="">
+
+                <div class="donation_list-animal-name">
+                    <!-- 동물이름 -->
+                    <p>나래</p>
+                    <!-- 성별에 따라 다른 아이콘 -->
+                    <img src="{% static 'img/male.png' %}" alt="">
+                </div>
+
+                <div class="donation_list-info-container">
+                    <div class="donation_list-species">
+                        <img src="{% static 'img/animal.png' %}" alt="">
+                        <!-- 동물 종 -->
+                        <p>재패니즈 스피츠</p>
+                    </div>
+
+                    <div class="donation_list-age">
+                        <img src="{% static 'img/age.png' %}" alt="">
+                        <div>
+                            <!-- 동물 나이 -->
+                            <p>12</p>
+                            <p>살</p>
+                        </div>
+                    </div>
+
+                    <div class="donation_list-kg">
+                        <div>
+                            <img class="donation_list-kg-img" src="{% static 'img/kg.png' %}" alt="">
+                            <div>
+                                <!-- 동물 몸무게 -->
+                                <p>12</p>
+                                <p>kg</p>
+                            </div>
+                        </div>
+
+                        <!-- 좋아요 하트 -->
+                        <img class="donation_list-like" src="{% static 'img/like.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <!-- 여기 동물 사진 들어갑니다 -->
+                <img class="donation_list-animal-img" src="../media/imgs/animal/b2ffe946-f005-44dd-8c86-6e0f9e9c3153.jpg" alt="">
+
+                <div class="donation_list-animal-name">
+                    <!-- 동물이름 -->
+                    <p>나래</p>
+                    <!-- 성별에 따라 다른 아이콘 -->
+                    <img src="{% static 'img/male.png' %}" alt="">
+                </div>
+
+                <div class="donation_list-info-container">
+                    <div class="donation_list-species">
+                        <img src="{% static 'img/animal.png' %}" alt="">
+                        <!-- 동물 종 -->
+                        <p>재패니즈 스피츠</p>
+                    </div>
+
+                    <div class="donation_list-age">
+                        <img src="{% static 'img/age.png' %}" alt="">
+                        <div>
+                            <!-- 동물 나이 -->
+                            <p>12</p>
+                            <p>살</p>
+                        </div>
+                    </div>
+
+                    <div class="donation_list-kg">
+                        <div>
+                            <img class="donation_list-kg-img" src="{% static 'img/kg.png' %}" alt="">
+                            <div>
+                                <!-- 동물 몸무게 -->
+                                <p>12</p>
+                                <p>kg</p>
+                            </div>
+                        </div>
+
+                        <!-- 좋아요 하트 -->
+                        <img class="donation_list-like" src="{% static 'img/like.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <!-- 여기 동물 사진 들어갑니다 -->
+                <img class="donation_list-animal-img" src="../media/imgs/animal/b2ffe946-f005-44dd-8c86-6e0f9e9c3153.jpg" alt="">
+
+                <div class="donation_list-animal-name">
+                    <!-- 동물이름 -->
+                    <p>나래</p>
+                    <!-- 성별에 따라 다른 아이콘 -->
+                    <img src="{% static 'img/male.png' %}" alt="">
+                </div>
+
+                <div class="donation_list-info-container">
+                    <div class="donation_list-species">
+                        <img src="{% static 'img/animal.png' %}" alt="">
+                        <!-- 동물 종 -->
+                        <p>재패니즈 스피츠</p>
+                    </div>
+
+                    <div class="donation_list-age">
+                        <img src="{% static 'img/age.png' %}" alt="">
+                        <div>
+                            <!-- 동물 나이 -->
+                            <p>12</p>
+                            <p>살</p>
+                        </div>
+                    </div>
+
+                    <div class="donation_list-kg">
+                        <div>
+                            <img class="donation_list-kg-img" src="{% static 'img/kg.png' %}" alt="">
+                            <div>
+                                <!-- 동물 몸무게 -->
+                                <p>12</p>
+                                <p>kg</p>
+                            </div>
+                        </div>
+
+                        <!-- 좋아요 하트 -->
+                        <img class="donation_list-like" src="{% static 'img/like.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>

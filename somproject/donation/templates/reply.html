@@ -1,0 +1,10 @@
+<form method="POST" action="{% url 'reply' %}">
+    {% csrf_token %}
+    <input type="hidden" value="1" name="post_id">
+    <input type="hidden" value="1" name="mb_id">    
+    댓글 작성 : <input type="text" name="comm_content"></input>
+    <button type="submit" class="btn btn-secondary">작성</button>
+</form>
+{% for comment in comments %}
+    <p> <span> {{comment.mb_id}} </span> : {{ comment.comm_content }} : {{comment.comm_date}} </p>
+{% endfor %}

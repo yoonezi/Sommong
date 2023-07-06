@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+</head>
+<body>
+    {% include 'base.html' %}
+
+    <main>
+        <div class="try">
+            <div class="essential-notice">
+                <h1>기본정보</h1>
+                
+                <div class="essentail-notice-box">
+                    <p class="essential-notice-star">*</p>
+                    <p class="essential-notice-title">필수입력 정보 입니다</p>
+                </div>
+            </div>
+
+            <div class="base-signup-wrap">
+                <div class="base-signup-container">
+                    <p>*</p>
+                    <input type="text" placeholder="아이디 (4~12자 영문과 숫자)">
+                </div>
+
+                <div class="base-signup-container">
+                    <p>*</p>
+                    <input type="password" placeholder="비밀번호 (10자 이상, 영문, 숫자, 특수문자)">
+                </div>
+
+                <div class="base-signup-container">
+                    <p>*</p>
+                    <input type="password" placeholder="비밀번호 확인">
+                </div>
+            </div>    
+
+            <h1>회원정보</h1>
+
+            <div class="client-signup-wrap">
+                <div class="client-signup-container">
+                    <p class="">*</p>
+                    <input type="text" placeholder="이름">
+                </div>
+
+                <div class="client-signup-container">
+                    <input type="text" placeholder="이메일">
+                </div>
+
+                <div class="client-box-wrap">
+                    <div class="client-signup-container client-signup-box">
+                        <p>*</p>
+                        <input type="text" placeholder="휴대폰 번호 (-없이 숫자만 입력)">
+                    </div>
+
+                    <button class="self-auth-btn">본인인증</button>
+                </div>
+
+                <div class="client-box-wrap">
+                    <div class="client-signup-box-two">
+                        <p>*</p>
+                        <input type="text" placeholder="인증번호">
+                    </div>
+
+                    <button class="confirm-btn">확인</button>
+                    <button class="resend-btn">재전송</button>
+                </div>
+            </div>
+        
+        <button class="signup-btn">가입하기</button>
+        </div>
+    </main>
+</body>
+</html>
